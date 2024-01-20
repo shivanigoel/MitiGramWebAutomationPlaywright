@@ -10,9 +10,15 @@
 <h1 align="center">Playwright Web Automation</h1>
 <br>
 
-## :About ##
+## About ##
 
 This project contains Web automation tests for the Mitigram application  for the Login and Career page  using Playwright.
+
+## Project Structure ##
+
+![image](https://github.com/shivanigoel/MitigramWebAutomation/assets/27926245/2fa3835d-f410-4e90-b19f-88c2ed6619f8)
+
+
 
 ## Technologies ##
 

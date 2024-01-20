@@ -13,14 +13,7 @@
 
   <h2>Folder Structure</h2>
 <ul>
-
-  ![image](https://github.com/shivanigoel/MitigramWebAutomation/assets/27926245/ac9c137c-24d7-4a88-980b-6381f8d43c26)
-
-    <li><strong>src:</strong> Root package of the core components of the framework.</li>
-    <li><strong>fixture:</strong> Page Classes following the Page Object Model (POM) design pattern.</li>
-    <li><strong>pages:</strong> Page classes containing methods encapsulating interactions and validations.</li>
-    <li><strong>TestData:</strong> Test data files and resources.</li>
-    <li><strong>Tests:</strong> Test cases implementing test scenarios.</li>
+  ![image](https://github.com/shivanigoel/MitigramWebAutomation/assets/27926245/ac9c137c-24d7-4a88-980b-6381f8d43c26) 
 </ul>
 
 

@@ -7,30 +7,20 @@
 </head>
 <body>
 
-<h1 align="center">Playwright UI Automation</h1>
-
-<p align="center">
-  <a href="#dart-about">About</a> &#xa0; | &#xa0; 
-  <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
-  <a href="#white_check_mark-prerequisites">Prerequisites</a> &#xa0; | &#xa0;
-  <a href="#checkered_flag-setup">Setup</a> &#xa0; | &#xa0;
-  <a href="#white_check_mark-test">Test</a> &#xa0; | &#xa0;
-  <a href="#bulb-contribute">Contribute</a> &#xa0; | &#xa0;
-  <a href="#memo-license">License</a> &#xa0; | &#xa0;
-  <a href="https://github.com/your-username" target="_blank">Author</a>
-</p>
+<h1 align="center">Playwright Web Automation</h1>
 <br>
 
-## :dart: About ##
+## :About ##
 
-This project contains UI automation tests for the Mitigram application using Playwright.
+This project contains Web automation tests for the Mitigram application  for the Login and Career page  using Playwright.
 
-## :rocket: Technologies ##
+## Technologies ##
 
 The following technologies are used in this project:
 
 - [Playwright](https://playwright.dev/)
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [axios]
 
 ## :white_check_mark: Prerequisites ##
 
@@ -44,8 +34,8 @@ Before starting, ensure you have the following installed:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/playwright-ui-automation.git
-cd playwright-ui-automation
+git clone https://github.com/shivanigoel/MitigramWebAutomation.git
+cd playwrightwebautomation
 
 
 :bulb: Contribute

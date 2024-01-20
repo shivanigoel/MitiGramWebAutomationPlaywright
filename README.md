@@ -13,7 +13,9 @@
 
   <h2>Folder Structure</h2>
 <ul>
+  
   ![image](https://github.com/shivanigoel/MitigramWebAutomation/assets/27926245/ac9c137c-24d7-4a88-980b-6381f8d43c26) 
+  
 </ul>
 
 

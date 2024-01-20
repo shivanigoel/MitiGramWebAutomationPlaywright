@@ -1,46 +1,69 @@
-Mitigram Assignment - Playwright Test Scenarios
-Introduction
-This repository contains Playwright test scenarios to validate the Login flow of the Mitigram portal, the Careers page, and the Newsletter section.
+<!DOCTYPE html>
+<html>
 
-Supported Operating Systems
-Windows
-Linux
-Mac
-Folder Structure
-src: Root package of the core components of the framework.
-pages: Page Classes following the Page Object Model (POM) design pattern.
-steps: Steps classes containing methods encapsulating interactions and validations.
-test: Test cases.
-utils: Utility classes.
-Prerequisites
-Ensure the following dependencies are installed before building and running the test suite:
+<head>
+  <title>Mitigram Assignment - Playwright Test Scenarios</title>
+</head>
 
-Node.js
+<body>
 
-Check Node.js Installation
-Run the command node -v in a terminal. It should display the installed Node.js version (e.g., v21.5.0).
-Configure Test Suite (Before Run)
-Open the file config/config.json.
+  <h1>Introduction</h1>
+  <p>This repository contains Playwright test scenarios to validate the Login flow of the Mitigram portal, the Careers page, and the Newsletter section.</p>
 
-Adjust the following configurations:
+  <h2>Supported Operating Systems</h2>
+  <ul>
+    <li>Windows</li>
+    <li>Linux</li>
+    <li>Mac</li>
+  </ul>
 
-PLAYWRIGHT_TIMEOUT: Timeout configurations used in Playwright.
-BROWSER: Browser configuration (e.g., 'chromium', 'firefox'). Default is 'chromium'.
-Build and Run Locally
-Install Dependencies
-Run the command npm install in a terminal from the project root directory to install the dependencies.
+  <h2>Folder Structure</h2>
+  <ul>
+    <li><strong>src:</strong> Root package of the core components of the framework.</li>
+    <li><strong>pages:</strong> Page Classes following the Page Object Model (POM) design pattern.</li>
+    <li><strong>steps:</strong> Steps classes containing methods encapsulating interactions and validations.</li>
+    <li><strong>test:</strong> Test cases.</li>
+    <li><strong>utils:</strong> Utility classes.</li>
+  </ul>
 
-Execute Testcases
-Execute Full Suite
-Run the command npm test in a terminal from the project root directory.
+  <h2>Prerequisites</h2>
+  <p>Ensure the following dependencies are installed before building and running the test suite:</p>
+  <ul>
+    <li>Node.js</li>
+    <ul>
+      <li><a href="https://nodejs.org/">Check Node.js Installation</a></li>
+      <li>Run the command <code>node -v</code> in a terminal. It should display the installed Node.js version (e.g., v21.5.0).</li>
+    </ul>
+  </ul>
 
-Execute Specific Test Cases
-Run the command npx playwright test {path to the test file} in a terminal from the project root directory. Update {path to the test file} according to the test case you want to run.
+  <h2>Configure Test Suite (Before Run)</h2>
+  <p>Open the file <code>config/config.json</code>.</p>
+  <p>Adjust the following configurations:</p>
+  <ul>
+    <li><code>PLAYWRIGHT_TIMEOUT:</code> Timeout configurations used in Playwright.</li>
+    <li><code>BROWSER:</code> Browser configuration (e.g., 'chromium', 'firefox'). Default is 'chromium'.</li>
+  </ul>
 
-npx playwright test src/test/careersPageTests.ts
+  <h2>Build and Run Locally</h2>
 
-View Test Results Report
-Open the file testReports/testResults.html in a web browser to view the HTML test results report.
+  <h3>Install Dependencies</h3>
+  <p>Run the command <code>npm install</code> in a terminal from the project root directory to install the dependencies.</p>
 
-View Test Logs
-Open the file logs/mitigram-playwright-test.log to view the outputs logged to the file.
+  <h3>Execute Testcases</h3>
+
+  <h4>Execute Full Suite</h4>
+  <p>Run the command <code>npm test</code> in a terminal from the project root directory.</p>
+
+  <h4>Execute Specific Test Cases</h4>
+  <p>Run the command <code>npx playwright test {path to the test file}</code> in a terminal from the project root directory. Update <code>{path to the test file}</code> according to the test case you want to run.</p>
+  <p>Example: <code>npx playwright test src/test/careersPageTests.ts</code></p>
+
+  <h3>View Test Results Report</h3>
+  <p>Open the file <code>testReports/testResults.html</code> in a web browser to view the HTML test results report.</p>
+
+  <h3>View Test Logs</h3>
+  <p>Open the file <code>logs/mitigram-playwright-test.log</code> to view the outputs logged to the file.</p>
+
+</body>
+
+</html>

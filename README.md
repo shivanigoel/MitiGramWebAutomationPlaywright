@@ -8,23 +8,18 @@
 <body>
 
   <h1>Introduction</h1>
-  <p>This repository contains Playwright test scenarios to validate the Login flow of the Mitigram portal, the Careers page, and the Newsletter section.</p>
+  <p>This repository contains Playwright test scenarios to validate the Login flow of the Mitigram portal, and the Careers page.</p>
 
-  <h2>Supported Operating Systems</h2>
-  <ul>
-    <li>Windows</li>
-    <li>Linux</li>
-    <li>Mac</li>
-  </ul>
 
   <h2>Folder Structure</h2>
-  <ul>
+<ul>
     <li><strong>src:</strong> Root package of the core components of the framework.</li>
-    <li><strong>pages:</strong> Page Classes following the Page Object Model (POM) design pattern.</li>
-    <li><strong>steps:</strong> Steps classes containing methods encapsulating interactions and validations.</li>
-    <li><strong>test:</strong> Test cases.</li>
-    <li><strong>utils:</strong> Utility classes.</li>
-  </ul>
+    <li><strong>fixture:</strong> Page Classes following the Page Object Model (POM) design pattern.</li>
+    <li><strong>pages:</strong> Steps classes containing methods encapsulating interactions and validations.</li>
+    <li><strong>TestData:</strong> Test data files and resources.</li>
+    <li><strong>Tests:</strong> Test cases implementing test scenarios.</li>
+</ul>
+
 
   <h2>Prerequisites</h2>
   <p>Ensure the following dependencies are installed before building and running the test suite:</p>
@@ -36,19 +31,6 @@
     </ul>
   </ul>
 
-  <h2>Configure Test Suite (Before Run)</h2>
-  <p>Open the file <code>config/config.json</code>.</p>
-  <p>Adjust the following configurations:</p>
-  <ul>
-    <li><code>PLAYWRIGHT_TIMEOUT:</code> Timeout configurations used in Playwright.</li>
-    <li><code>BROWSER:</code> Browser configuration (e.g., 'chromium', 'firefox'). Default is 'chromium'.</li>
-  </ul>
-
-  <h2>Build and Run Locally</h2>
-
-  <h3>Install Dependencies</h3>
-  <p>Run the command <code>npm install</code> in a terminal from the project root directory to install the dependencies.</p>
-
   <h3>Execute Testcases</h3>
 
   <h4>Execute Full Suite</h4>
@@ -56,7 +38,7 @@
 
   <h4>Execute Specific Test Cases</h4>
   <p>Run the command <code>npx playwright test {path to the test file}</code> in a terminal from the project root directory. Update <code>{path to the test file}</code> according to the test case you want to run.</p>
-  <p>Example: <code>npx playwright test src/test/careersPageTests.ts</code></p>
+  <p>Example: <code>npx playwright test careerTest.spec.js --project chromium</code></p>
 
   <h3>View Test Results Report</h3>
   <p>Open the file <code>testReports/testResults.html</code> in a web browser to view the HTML test results report.</p>

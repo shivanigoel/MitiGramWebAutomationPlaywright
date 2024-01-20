@@ -1,127 +1,46 @@
-<h1 align="center">Mitigram Web Automation</h1>
+Mitigram Assignment - Playwright Test Scenarios
+Introduction
+This repository contains Playwright test scenarios to validate the Login flow of the Mitigram portal, the Careers page, and the Newsletter section.
 
-<p align="center">
-  <a href="#dart-about">About</a> &#xa0; | &#xa0; 
-  <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
-  <a href="#white_check_mark-prerequisites">Prerequisites</a> &#xa0; | &#xa0;
-  <a href="#checkered_flag-start">Start</a> &#xa0; | &#xa0;
-  <a href="#white_check_mark-test">Test</a> &#xa0; | &#xa0;
-  <a href="#bulb-contribute">Contribute</a> &#xa0; | &#xa0;
-  <a href="#memo-license">License</a> &#xa0; | &#xa0;
-  <a href="https://github.com/akoliadiuk" target="_blank">Author</a>
-</p>
-<br>
+Supported Operating Systems
+Windows
+Linux
+Mac
+Folder Structure
+src: Root package of the core components of the framework.
+pages: Page Classes following the Page Object Model (POM) design pattern.
+steps: Steps classes containing methods encapsulating interactions and validations.
+test: Test cases.
+utils: Utility classes.
+Prerequisites
+Ensure the following dependencies are installed before building and running the test suite:
 
-## :dart: About ##
+Node.js
 
-This project contains automated web tests for the Mitigram Login and Careers pages using Playwright.
+Check Node.js Installation
+Run the command node -v in a terminal. It should display the installed Node.js version (e.g., v21.5.0).
+Configure Test Suite (Before Run)
+Open the file config/config.json.
 
-## :rocket: Technologies ##
+Adjust the following configurations:
 
-The following tools were used in this project:
+PLAYWRIGHT_TIMEOUT: Timeout configurations used in Playwright.
+BROWSER: Browser configuration (e.g., 'chromium', 'firefox'). Default is 'chromium'.
+Build and Run Locally
+Install Dependencies
+Run the command npm install in a terminal from the project root directory to install the dependencies.
 
-- [Node.js](https://nodejs.org/en/)
-- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-- [Playwright](https://playwright.dev/)
+Execute Testcases
+Execute Full Suite
+Run the command npm test in a terminal from the project root directory.
 
+Execute Specific Test Cases
+Run the command npx playwright test {path to the test file} in a terminal from the project root directory. Update {path to the test file} according to the test case you want to run.
 
-## :white_check_mark: Prerequisites ##
+npx playwright test src/test/careersPageTests.ts
 
-Before starting, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
+View Test Results Report
+Open the file testReports/testResults.html in a web browser to view the HTML test results report.
 
-## :checkered_flag: Start ##
-
-```bash
-# Clone this project
-$ git clone https://github.com/shivanigoel/MitigramWebAutomation.git
-
-# Access the repository directory
-$ cd mitigramwebautomation
-
-# Install dependencies
-$ npm i
-
-# Install dependencies
-$ npm install
-
-```
-
-
-
-## :white_check_mark: Test ##
-
-```bash
-# Run all tests using the default(chromium) browser
-$ npm run test
-
-# Run all tests in all supported browsers headless
-$ npm run test-regression
-
-# Run smoke suite which includes @critical and @high priority test cases
-$ npm run test-smoke
-
-# Generate report after test run
-$ npm run report
-```
-Alternatively, you can run `npx playwright test` with a variety of different [options](https://playwright.dev/docs/test-cli) to configure test run for your needs.
-
-## :bulb: Contribute ##
-
-### Contributions are welcome! :fire:
-
-#### To contribute:
-
-1. Fork the repository
-2. Make desired changes to the codebase
-3. Write or update test cases according to the priority guidelines below
-4. Ensure all tests are passing
-5. Submit a pull request explaining your changes
-
-### :exclamation: Test Case Prioritization
-
-All new test cases should be prioritized according to the following rules:
-
-
-**Critical**
-
-*"Must-pass" tests - failure indicates severe impact on core functionality. Focus on tests covering business-critical features and user flows. Aim for high speed and stability of these tests.*
-
-
-**High**
-
-*Important aspects of user experience - regressions cause disruption to key business logic. Prioritize tests used by a significant portion of users or affecting key workflows. Balance coverage and execution time for these tests.*
-
-
-**Medium**
-
-*Secondary features - impacting user convenience or specific tasks. Regressions might require future attention but won’t block the whole user flow. Include tests verifying edge cases and less-essential functionalities.*
-
-
-**Low**
-
-*Exploratory tests or functionality rarely used - low impact on overall quality. Consider deferring these tests or running them less frequently. Focus on improving coverage, run time and stability of higher-priority tests first.*
-
-
-:grey_exclamation:**Important: in order to run and maintain tests based on priority, mark them accordingly, with these tags in test description:**
-- `@critical`
-- `@high`
-- `@medium`
-- `@low`
-
-
-**Note:** priorities for the existing test should be reviewed on a regular basis and updated accordingly. Here are the top factors that tend to change so should be taken into account updating priority:
-- **business risk** - how important the feature is for the end user, what is the risk for it to brake
-- **requirement volatility** - how frequently the requirement changes
-- **fault proneness** - how error-prone a requirement has been in previous versions of software
-
-
-## :memo: License ##
-
-This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
-
-
-
-Made with :heart: by <a href="https://github.com/akoliadiuk" target="_blank">Andrii Koliadiuk</a>
-&#xa0;
-
-<a href="#top">:arrow_up: Back to top</a>
+View Test Logs
+Open the file logs/mitigram-playwright-test.log to view the outputs logged to the file.

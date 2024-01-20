@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Mitigram Assignment - Playwright Test Scenarios</title>
+  Mitigram Assignment - Playwright Test Scenarios
 </head>
 
 <body>

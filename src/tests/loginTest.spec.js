@@ -5,7 +5,7 @@ const TestHelpers = require('../pages/TestHelpers');
 const testData = require('../TestData/testdata.json');
 const assertionMessages = require('../TestData/assertionMessages');
 
-const expectedTitle = 'Mitigram';
+
 
 const setupLoginPage = (page) => new LoginPage(page);
 const setupTestHelpers = (page) => new TestHelpers(page);
@@ -24,28 +24,28 @@ fixture.context.afterEach(async () => {
 });
 
 test.describe('Login Tests', () => {
-  test('User can log in successfully with valid credentials @Critical', async () => {
+  test('User can login successfully with valid credentials @Critical', async () => {
     const { email, password } = testData.validCredentials;
     await testHelpers.performLogin(email, password);
     const title = await loginPage.getTitle();
-    expect(title).toMatch(expectedTitle);
+    expect(title).toMatch(assertionMessages.expectedTitle);
   });
 
-  test('User cannot log in with Invalid Email @high', async () => {
+  test('User cannot login with Invalid Email @high', async () => {
     const { invalidEmail, Password } = testData.incorrectEmail;
     await testHelpers.performLogin(invalidEmail, Password);
     const InvalidErrorMsg = await loginPage.notAValidEmailText();
     expect(InvalidErrorMsg).toMatch(assertionMessages.InvalidEmailError);
   });
 
-  test('User cannot log in with incorrect password @high', async () => {
+  test('User cannot login with incorrect password @high', async () => {
     const { email, incorrectPassword } = testData.invalidCredentials;
     await testHelpers.performLogin(email, incorrectPassword);
     const InvalidErrorMsg = await loginPage.invalidLoginText();
     expect(InvalidErrorMsg).toMatch(assertionMessages.invalidLogin);
   });
 
-  test('User cannot log in with empty email and password @Medium', async () => {
+  test('User cannot login with empty email and password @Medium', async () => {
     const { email, password } = testData.emptyCredentials;
     await testHelpers.performLogin(email, password);
     const InvalidEmailErrorMsg = await loginPage.invalidEmailText();
@@ -53,8 +53,8 @@ test.describe('Login Tests', () => {
   });
 });
 
-test.describe('Navigation Tests @Medium', () => {
-  test('User can navigate to the Forgot Password page', async () => {
+test.describe('Navigation Tests', () => {
+  test('User can navigate to the Forgot Password page @Medium', async () => {
     await loginPage.clickForgotPasswordLink();
     expect(await loginPage.isEmailLinkVisible()).toBe(true);
     const currentURL = await loginPage.getCurrentURL();
@@ -93,6 +93,8 @@ test.describe('Cookies Tests @critical', () => {
     const sessionCookie = cookies.find(cookie => cookie.name === 'Mitigram.StickySession');
     expect(sessionCookie).toBeDefined();
   });
+
+
 
   test.fixme('User should receive a email after click on email link', async () => {
   });

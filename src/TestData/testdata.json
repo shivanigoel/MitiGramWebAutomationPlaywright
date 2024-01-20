@@ -14,6 +14,12 @@
     "emptyCredentials": {
       "email": "",
       "password": ""
+    },
+    "apiEndpoint": "https://marketplace.mitigram.com/Account/Login?ReturnUrl=%2F",  
+    "loginAPI": {
+      "StatusCode": "OK",
+      "RequestMethod":"GET"  
     }
+    
   }
   

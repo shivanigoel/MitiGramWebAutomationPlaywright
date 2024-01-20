@@ -74,6 +74,10 @@ class CareersPage {
         return this.isElementVisible(this.locators.openpositions);
       }
 
+      async isLearnMoreVisible() {
+        return this.isElementVisible(this.locators.learnMore);
+      }
+
 
       async isJobListingAvailable() {
         try {
@@ -102,6 +106,16 @@ class CareersPage {
           throw error;
         }
       }
+
+      async clickApplyforPositionBtn() {
+        try {
+          await this.page.click(this.locators.applyforthisposition);
+          console.log('Clicked on apply for Position Button.');
+        } catch (error) {
+          console.error(`Error clicking on Apply for position button: ${error.message}`);
+          throw error;
+        }
+      }
       async isApplyforthisPositionVisible() {
         return this.isElementVisible(this.locators.applyforthisposition);
       }
@@ -111,6 +125,16 @@ class CareersPage {
         } catch (error) {
           console.error(`Error getting page title: ${error.message}`);
           throw error;
+        }
+      }
+
+      async getCurrentURL() {
+        try {
+          const currentUrl = await this.page.url();
+          return currentUrl;
+        } catch (error) {
+          console.error(`Error checking for URL: ${error.message}`);
+          return false;
         }
       }
 

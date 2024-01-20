@@ -1,8 +1,8 @@
 const { test, expect } = require('@playwright/test');
 const CareersPage = require('../pages/CareersPage');
 const fixture = require('../fixture/Fixture');
+const assertionMessages = require('../TestData/assertionMessages');
 
-const expectedTitle = 'Careers';
 
 const setupCareersPage = (page) => new CareersPage(page);
 
@@ -17,11 +17,11 @@ fixture.context.afterEach(async () => {
   await careerPage.close();
 });
 
-test.describe('Careers Page Tests @critical', () => {
+test.describe('Careers Page Tests ', () => {
   // Test Case 1: Page Navigation
-  test('User can access the careers page and verify the URL', async () => {
+  test('User can access the careers page and verify the URL @critical', async () => {
     const title = await careerPage.getTitle();
-    expect(title).toMatch(expectedTitle);
+    expect(title).toMatch(assertionMessages.expectedTitlecareer);
   });
 
   // Test Case 2: Page Content
@@ -31,11 +31,15 @@ test.describe('Careers Page Tests @critical', () => {
   });
 
   // Test Case 3: Job Listings
-  test('Job listings are displayed correctly with valid "Apply for this position" buttons if there is any open position @Medium', async () => {
+  test('Job listings are displayed correctly with valid "Apply for this position and Learn More" buttons if there is any open position @high', async () => {
     
     await careerPage.clickopenPositionBtn();
     await careerPage.isJobListingAvailable();
+    expect(await careerPage.isLearnMoreVisible()).toBe(true);
     expect(await careerPage.isApplyforthisPositionVisible()).toBe(true);
+    await careerPage.clickApplyforPositionBtn();
+    const currentURL = await careerPage.getCurrentURL();
+    expect(currentURL).toBe(assertionMessages.VerifyApplyjoburl);
   });
 
   // Test Case 4: Header, Footer, and Logo Visibility Test
@@ -55,11 +59,22 @@ test.describe('Careers Page Tests @critical', () => {
 
   test.fixme('User can filter job listings based on Role', async () => {
     // This test case needs to be implemented to verify if the user can successfully
-    // filter job listings based on the location on the Careers page.
-  });
-  
-  test.fixme('After Click on Apply for this position button user should navige to the correct page' , async () => {
-    // This test case needs to be implemented to verify if the application form displays
-    // appropriate validation messages when the user submits an incomplete form.
-  });
+    // filter job listings based on the role on the Careers page.
+});
+
+test.fixme('After clicking the "Apply for this position" button, the user should navigate to the correct page', async () => {
+    // This test case needs to be implemented to verify if the user is correctly navigated
+    // to the appropriate page after clicking the "Apply for this position" button.
+});
+
+test.fixme('We can verify the CSS properties for the buttons', async () => {
+    // This test case needs to be implemented to verify the CSS properties for buttons
+    // on the Careers page.
+});
+
+test.fixme('We can implement the test case using an API as well', async () => {
+    // This test case needs to be implemented to verify specific behavior using an API.
+    // For example, validating data consistency between UI and API responses.
+});
+
 });

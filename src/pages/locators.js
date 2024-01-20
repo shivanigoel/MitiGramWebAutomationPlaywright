@@ -21,6 +21,7 @@ module.exports = {
         headerSelector:'//header[@id="g-header"]',
         footerSelector:'//footer[@id="g-footer"]',
         logoSelector:'//div[@id="logo-8346-particle"]//a[@class="g-logo"]',
+        learnMore:'//a[@href="/images/ads/BI-Analyst.pdf"]'
 
 
     },

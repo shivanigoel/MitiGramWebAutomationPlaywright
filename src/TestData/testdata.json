@@ -1,0 +1,19 @@
+{
+    "validCredentials": {
+      "email": "valid@example.com",
+      "password": "validPassword"
+    },
+    "invalidCredentials": {
+      "email": "valid@example.com",
+      "incorrectPassword": "incorrectPassword"
+    },
+    "incorrectEmail": {
+      "invalidEmail": "validexample.com",
+      "Password": "correctPassword"
+    },
+    "emptyCredentials": {
+      "email": "",
+      "password": ""
+    }
+  }
+  

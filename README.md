@@ -14,7 +14,7 @@
 
 ## :dart: About ##
 
-This project contains automated UI tests for the Login and Careers pages on Mitigram using Playwright.
+This project contains automated web tests for the Mitigram Login and Careers pages using Playwright.
 
 ## :rocket: Technologies ##
 
@@ -33,10 +33,10 @@ Before starting, you need to have [Git](https://git-scm.com) and [Node](https://
 
 ```bash
 # Clone this project
-$ git clone https://github.com/akoliadiuk/mitigram-ui-automation.git
+$ git clone https://github.com/shivanigoel/MitigramWebAutomation.git
 
 # Access the repository directory
-$ cd mitigram-ui-automation
+$ cd mitigramwebautomation
 
 # Install dependencies
 $ npm i
@@ -44,11 +44,9 @@ $ npm i
 # Install dependencies
 $ npm install
 
-# Create your own '.env' file
-$ cp example.env .env
 ```
 
-Next, fill .env file with actual credentials or leave as is to use dummy values. **DO NOT commit .env file to VCS.**
+
 
 ## :white_check_mark: Test ##
 
